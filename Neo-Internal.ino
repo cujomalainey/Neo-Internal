@@ -4,7 +4,7 @@
 #define LEDPIN         10
 
 // Which pin on the Arduino is connected to the Power Line?
-#define POWERPIN         12
+#define POWERPIN       14
 
 // How many NeoPixels are attached to the Arduino?
 #define NUMPIXELS      60
@@ -37,7 +37,7 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(POWERPIN) == HIGH) {
+  if (digitalRead(POWERPIN)) {
     for(int i=0;i<NUMPIXELS;i++){
       pixels.setPixelColor(i, 
         pixels.Color(
